@@ -1211,27 +1211,54 @@
         // Progress tracking
         function updateProgress() {
             const form = document.getElementById('surveyForm');
-            const requiredFields = form.querySelectorAll('[required]');
+            
+            // Count all required fields (text inputs and slider)
+            const requiredTextFields = form.querySelectorAll('input[type="text"][required], input[type="range"][required]');
+            
+            // Count required radio groups manually
+            const requiredRadioGroups = [
+                'AI_Usage_Frequency',
+                'AI_In_Core_Offering',
+                'Business_Effect_Financial',
+                'Data_Quality',
+                'AI_Strategy',
+                'AI_Beneficiary_Capacity',
+                'AI_Beneficiary_Access',
+                'AI_Cost_Per_Impact'
+            ];
+            
+            // Count required checkbox groups
+            const requiredCheckboxGroups = [
+                'Current_AI_Tools',
+                'AI_Application_Areas',
+                'AI_Barriers',
+                'AI_Impact_Outcomes',
+                'Elea_Support'
+            ];
+            
+            const totalRequired = requiredTextFields.length + requiredRadioGroups.length + requiredCheckboxGroups.length;
             let completed = 0;
             
-            requiredFields.forEach(field => {
-                if (field.type === 'checkbox' || field.type === 'radio') {
-                    const name = field.getAttribute('name');
-                    const checked = form.querySelector(`[name="${name}"]:checked`);
-                    if (checked && !field.dataset.counted) {
-                        completed++;
-                        // Mark as counted to avoid double counting for radio/checkbox groups
-                        form.querySelectorAll(`[name="${name}"]`).forEach(f => f.dataset.counted = 'true');
-                    }
-                } else if (field.value.trim() !== '') {
+            // Check text fields
+            requiredTextFields.forEach(field => {
+                if (field.value && field.value.trim() !== '') {
                     completed++;
                 }
             });
             
-            // Reset counted flags
-            form.querySelectorAll('[data-counted]').forEach(f => delete f.dataset.counted);
+            // Check radio groups
+            requiredRadioGroups.forEach(groupName => {
+                const checked = form.querySelector(`input[name="${groupName}"]:checked`);
+                if (checked) completed++;
+            });
             
-            const percentage = Math.round((completed / requiredFields.length) * 100);
+            // Check checkbox groups
+            requiredCheckboxGroups.forEach(groupName => {
+                const checked = form.querySelectorAll(`input[name="${groupName}"]:checked`);
+                if (checked.length > 0) completed++;
+            });
+            
+            const percentage = totalRequired > 0 ? Math.round((completed / totalRequired) * 100) : 0;
             document.getElementById('progressFill').style.width = percentage + '%';
             document.getElementById('progressText').textContent = percentage + '% Complete';
         }
