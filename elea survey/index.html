@@ -900,67 +900,6 @@
                     </div>
                 </div>
 
-                <!-- Q4.2: AI Impact on Target Population (SECTOR-SPECIFIC) -->
-                <div class="question-group">
-                    <label class="question-label">
-                        How is AI directly improving outcomes for your target population? (Select all that apply) <span class="required">*</span>
-                    </label>
-                    <div class="help-text">Select the outcomes most relevant to your sector - check at least one</div>
-                    <div class="checkbox-group">
-                        <div class="checkbox-option">
-                            <input type="checkbox" name="AI_Impact_Outcomes" value="AVC: Increases farmer productivity (yields, income, resilience)" id="impact1">
-                            <label for="impact1"><strong>AVC:</strong> Increases farmer productivity (yields, income, resilience)</label>
-                        </div>
-                        <div class="checkbox-option">
-                            <input type="checkbox" name="AI_Impact_Outcomes" value="AVC: Improves market access (fair prices, reliable offtake)" id="impact2">
-                            <label for="impact2"><strong>AVC:</strong> Improves market access (fair prices, reliable offtake)</label>
-                        </div>
-                        <div class="checkbox-option">
-                            <input type="checkbox" name="AI_Impact_Outcomes" value="ES: Improves job placement rates or quality" id="impact3">
-                            <label for="impact3"><strong>ES:</strong> Improves job placement rates or quality</label>
-                        </div>
-                        <div class="checkbox-option">
-                            <input type="checkbox" name="AI_Impact_Outcomes" value="ES: Enables skills-to-jobs matching" id="impact4">
-                            <label for="impact4"><strong>ES:</strong> Enables skills-to-jobs matching</label>
-                        </div>
-                        <div class="checkbox-option">
-                            <input type="checkbox" name="AI_Impact_Outcomes" value="LMRS: Improves merchant livelihoods (inventory, credit, income)" id="impact5">
-                            <label for="impact5"><strong>LMRS:</strong> Improves merchant livelihoods (inventory, credit, income)</label>
-                        </div>
-                        <div class="checkbox-option">
-                            <input type="checkbox" name="AI_Impact_Outcomes" value="LMRS: Reduces cost of goods/services for BoP consumers" id="impact6">
-                            <label for="impact6"><strong>LMRS:</strong> Reduces cost of goods/services for BoP consumers</label>
-                        </div>
-                        <div class="checkbox-option">
-                            <input type="checkbox" name="AI_Impact_Outcomes" value="CL: Strengthens climate resilience for vulnerable communities" id="impact7">
-                            <label for="impact7"><strong>CL:</strong> Strengthens climate resilience for vulnerable communities</label>
-                        </div>
-                        <div class="checkbox-option">
-                            <input type="checkbox" name="AI_Impact_Outcomes" value="CL: Enables participation in climate finance (carbon credits, etc.)" id="impact8">
-                            <label for="impact8"><strong>CL:</strong> Enables participation in climate finance (carbon credits, etc.)</label>
-                        </div>
-                        <div class="checkbox-option">
-                            <input type="checkbox" name="AI_Impact_Outcomes" value="Improves impact measurement (better tracking, verification)" id="impact9">
-                            <label for="impact9">Improves impact measurement (better tracking, verification)</label>
-                        </div>
-                        <div class="checkbox-option">
-                            <input type="checkbox" name="AI_Impact_Outcomes" value="No direct link yet - AI used mainly for internal operations" id="impact10">
-                            <label for="impact10">No direct link yet - AI used mainly for internal operations</label>
-                        </div>
-                        <div class="checkbox-option">
-                            <input type="checkbox" name="AI_Impact_Outcomes" value="Too early to measure" id="impact11">
-                            <label for="impact11">Too early to measure</label>
-                        </div>
-                    </div>
-                    <div class="comment-box">
-                        <div class="comment-toggle" onclick="toggleComment(this)">Add optional comment</div>
-                        <div class="comment-content">
-                            <label class="comment-label">Optional comment:</label>
-                            <textarea name="AI_Impact_Outcomes_Comment" placeholder="Please provide specific examples or quantify the impact..."></textarea>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Q4.3: Beneficiary Service Access -->
                 <div class="question-group">
                     <label class="question-label">
@@ -993,43 +932,6 @@
                         <div class="comment-content">
                             <label class="comment-label">Optional comment:</label>
                             <textarea name="AI_Beneficiary_Access_Comment" placeholder="Please provide examples..."></textarea>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Q4.4: Cost per Impact (NEW) -->
-                <div class="question-group">
-                    <label class="question-label">
-                        Has AI enabled you to scale impact without proportionally increasing costs? <span class="required">*</span>
-                    </label>
-                    <div class="help-text">I.e., Has AI reduced your cost per beneficiary served?</div>
-                    <div class="radio-group">
-                        <div class="radio-option">
-                            <input type="radio" name="AI_Cost_Per_Impact" value="Yes - significantly (>30% cost reduction per beneficiary)" id="cost1">
-                            <label for="cost1">Yes - significantly (>30% cost reduction per beneficiary)</label>
-                        </div>
-                        <div class="radio-option">
-                            <input type="radio" name="AI_Cost_Per_Impact" value="Yes - moderately (10-30% reduction)" id="cost2">
-                            <label for="cost2">Yes - moderately (10-30% reduction)</label>
-                        </div>
-                        <div class="radio-option">
-                            <input type="radio" name="AI_Cost_Per_Impact" value="Slightly (<10%)" id="cost3">
-                            <label for="cost3">Slightly (<10%)</label>
-                        </div>
-                        <div class="radio-option">
-                            <input type="radio" name="AI_Cost_Per_Impact" value="No / Too early to tell" id="cost4">
-                            <label for="cost4">No / Too early to tell</label>
-                        </div>
-                        <div class="radio-option">
-                            <input type="radio" name="AI_Cost_Per_Impact" value="Not applicable" id="cost5">
-                            <label for="cost5">Not applicable</label>
-                        </div>
-                    </div>
-                    <div class="comment-box">
-                        <div class="comment-toggle" onclick="toggleComment(this)">Add optional comment</div>
-                        <div class="comment-content">
-                            <label class="comment-label">Optional comment:</label>
-                            <textarea name="AI_Cost_Per_Impact_Comment" placeholder="Please explain or provide estimates..."></textarea>
                         </div>
                     </div>
                 </div>
@@ -1138,7 +1040,6 @@
                 'AI_Strategy',
                 'AI_Beneficiary_Capacity',
                 'AI_Beneficiary_Access',
-                'AI_Cost_Per_Impact',
                 'Workshop_Use_Case_Sharing'
             ];
             
@@ -1146,8 +1047,7 @@
             const requiredCheckboxGroups = [
                 'Current_AI_Tools',
                 'AI_Application_Areas',
-                'AI_Barriers',
-                'AI_Impact_Outcomes'
+                'AI_Barriers'
             ];
             
             const totalRequired = requiredTextFields.length + requiredRadioGroups.length + requiredCheckboxGroups.length;
@@ -1199,15 +1099,13 @@
                 'AI_Strategy',
                 'AI_Beneficiary_Capacity',
                 'AI_Beneficiary_Access',
-                'AI_Cost_Per_Impact',
                 'Workshop_Use_Case_Sharing'
             ];
             
             const requiredCheckboxGroups = [
                 { name: 'Current_AI_Tools', label: 'Which AI tools does your organization currently use?' },
                 { name: 'AI_Application_Areas', label: 'In which areas of your business have you applied or piloted AI?' },
-                { name: 'AI_Barriers', label: 'What is the biggest barrier to integrating AI?' },
-                { name: 'AI_Impact_Outcomes', label: 'How is AI directly improving outcomes for your target population?' }
+                { name: 'AI_Barriers', label: 'What is the biggest barrier to integrating AI?' }
             ];
             
             // Check text and textarea fields
