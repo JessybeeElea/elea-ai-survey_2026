@@ -499,6 +499,29 @@
                     <input type="text" name="Role_Title" class="input-text">
                 </div>
 
+                <div class="question-group">
+                    <label class="question-label">
+                        Will you be attending the session "AI for Scalability" on April 21 at 14:00–16:00 CEST? <span class="required">*</span>
+                    </label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="Workshop_Attendance" value="Yes">
+                            <span class="radio-text">Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="Workshop_Attendance" value="No">
+                            <span class="radio-text">No</span>
+                        </label>
+                    </div>
+                    <div class="comment-box">
+                        <div class="comment-toggle" onclick="toggleComment(this)">Add optional comment</div>
+                        <div class="comment-content">
+                            <label class="comment-label">Optional comment:</label>
+                            <textarea name="Workshop_Attendance_Comment" placeholder="Any additional thoughts..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- SECTION 1: CURRENT AI AWARENESS & ADOPTION -->
                 <div class="section-header">Section 1: Current AI Awareness & Adoption</div>
 
@@ -706,22 +729,6 @@
                     </div>
                 </div>
 
-                <!-- Q2.3: Value Proposition Change -->
-                <div class="question-group">
-                    <label class="question-label">
-                        How has AI changed your value proposition or competitive positioning in the market?
-                    </label>
-                    <div class="help-text">E.g., Enabled us to reach more remote populations, reduced cost per beneficiary, improved quality of service, created new revenue streams, etc.</div>
-                    <textarea name="Value_Proposition_Change" class="input-text" style="min-height: 100px;" placeholder="Describe how AI has impacted your market positioning..."></textarea>
-                    <div class="comment-box">
-                        <div class="comment-toggle" onclick="toggleComment(this)">Add optional comment</div>
-                        <div class="comment-content">
-                            <label class="comment-label">Optional comment:</label>
-                            <textarea name="Value_Proposition_Change_Comment" placeholder="Any additional thoughts..."></textarea>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Q2.4: AI-Enabled Business Improvements (NEW) -->
                 <div class="question-group">
                     <label class="question-label">
@@ -766,80 +773,8 @@
                     </div>
                 </div>
 
-                <!-- BUSINESS EFFECT (Kept from original) -->
-                <div class="question-group">
-                    <label class="question-label">
-                        In the last 12 months, what has been the primary financial impact of AI on your business? <span class="required">*</span>
-                    </label>
-                    <div class="radio-group">
-                        <div class="radio-option">
-                            <input type="radio" name="Business_Effect_Financial" value="Significant positive impact (>20% improvement)" id="fin1">
-                            <label for="fin1">Significant positive impact (>20% improvement)</label>
-                        </div>
-                        <div class="radio-option">
-                            <input type="radio" name="Business_Effect_Financial" value="Moderate positive impact (5-20% improvement)" id="fin2">
-                            <label for="fin2">Moderate positive impact (5-20% improvement)</label>
-                        </div>
-                        <div class="radio-option">
-                            <input type="radio" name="Business_Effect_Financial" value="Slight positive impact (<5% improvement)" id="fin3">
-                            <label for="fin3">Slight positive impact (<5% improvement)</label>
-                        </div>
-                        <div class="radio-option">
-                            <input type="radio" name="Business_Effect_Financial" value="No measurable impact yet" id="fin4">
-                            <label for="fin4">No measurable impact yet</label>
-                        </div>
-                        <div class="radio-option">
-                            <input type="radio" name="Business_Effect_Financial" value="Negative impact (increased costs)" id="fin5">
-                            <label for="fin5">Negative impact (increased costs)</label>
-                        </div>
-                        <div class="radio-option">
-                            <input type="radio" name="Business_Effect_Financial" value="Too early to tell" id="fin6">
-                            <label for="fin6">Too early to tell</label>
-                        </div>
-                    </div>
-                    <div class="comment-box">
-                        <div class="comment-toggle" onclick="toggleComment(this)">Add optional comment</div>
-                        <div class="comment-content">
-                            <label class="comment-label">Optional comment:</label>
-                            <textarea name="Business_Effect_Financial_Comment" placeholder="Please explain the nature of the impact (revenue, costs, efficiency, etc.)..."></textarea>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- SECTION 3: DIGITAL READINESS & INFRASTRUCTURE -->
                 <div class="section-header">Section 3: Digital Readiness & Infrastructure</div>
-
-                <!-- Q3.1: Data Quality -->
-                <div class="question-group">
-                    <label class="question-label">
-                        How would you describe the current state of your organizational data quality and infrastructure? <span class="required">*</span>
-                    </label>
-                    <div class="radio-group">
-                        <div class="radio-option">
-                            <input type="radio" name="Data_Quality" value="Not yet structured - data exists but not systematically collected" id="data1">
-                            <label for="data1">Not yet structured - data exists but not systematically collected</label>
-                        </div>
-                        <div class="radio-option">
-                            <input type="radio" name="Data_Quality" value="Basic - some data collection but manual/inconsistent" id="data2">
-                            <label for="data2">Basic - some data collection but manual/inconsistent</label>
-                        </div>
-                        <div class="radio-option">
-                            <input type="radio" name="Data_Quality" value="Moderate - systems exist but siloed/not integrated" id="data3">
-                            <label for="data3">Moderate - systems exist but siloed/not integrated</label>
-                        </div>
-                        <div class="radio-option">
-                            <input type="radio" name="Data_Quality" value="Strong - clean, integrated, AI-ready data infrastructure" id="data4">
-                            <label for="data4">Strong - clean, integrated, AI-ready data infrastructure</label>
-                        </div>
-                    </div>
-                    <div class="comment-box">
-                        <div class="comment-toggle" onclick="toggleComment(this)">Add optional comment</div>
-                        <div class="comment-content">
-                            <label class="comment-label">Optional comment:</label>
-                            <textarea name="Data_Quality_Comment" placeholder="Any additional details..."></textarea>
-                        </div>
-                    </div>
-                </div>
 
                 <!-- Q3.2: AI Strategy -->
                 <div class="question-group">
@@ -926,8 +861,8 @@
                     </div>
                 </div>
 
-                <!-- SECTION 4: AI FOR PEOPLE DEVELOPMENT & IMPACT -->
-                <div class="section-header">Section 4: AI for People Development & Impact</div>
+                <!-- SECTION 4: AI FOR IMPACT -->
+                <div class="section-header">Section 4: AI for Impact</div>
 
                 <!-- Q4.1: AI for Beneficiary Capacity Building (REVISED) -->
                 <div class="question-group">
@@ -1099,70 +1034,7 @@
                     </div>
                 </div>
 
-                <!-- SECTION 5: SUPPORT FROM ELEA -->
-                <div class="section-header">Section 5: Support from elea</div>
-
-                <!-- Q5.1: Where elea support would be valuable -->
-                <div class="question-group">
-                    <label class="question-label">
-                        Where would elea support be most valuable to help you leverage AI? (Select top 3) <span class="required">*</span>
-                    </label>
-                    <div class="help-text">Select up to 3 options</div>
-                    <div class="checkbox-group">
-                        <div class="checkbox-option">
-                            <input type="checkbox" name="Elea_Support" value="Sharing best practices from other portfolio ventures" id="support1">
-                            <label for="support1">Sharing best practices from other portfolio ventures</label>
-                        </div>
-                        <div class="checkbox-option">
-                            <input type="checkbox" name="Elea_Support" value="Connecting you with AI tools or vendors suited for impact ventures" id="support2">
-                            <label for="support2">Connecting you with AI tools or vendors suited for impact ventures</label>
-                        </div>
-                        <div class="checkbox-option">
-                            <input type="checkbox" name="Elea_Support" value="Providing external expert advice (data scientists, AI strategists)" id="support3">
-                            <label for="support3">Providing external expert advice (data scientists, AI strategists)</label>
-                        </div>
-                        <div class="checkbox-option">
-                            <input type="checkbox" name="Elea_Support" value="Training/workshops on AI for impact" id="support4">
-                            <label for="support4">Training/workshops on AI for impact</label>
-                        </div>
-                        <div class="checkbox-option">
-                            <input type="checkbox" name="Elea_Support" value="Identifying funding for AI infrastructure/pilots" id="support5">
-                            <label for="support5">Identifying funding for AI infrastructure/pilots</label>
-                        </div>
-                        <div class="checkbox-option">
-                            <input type="checkbox" name="Elea_Support" value="Co-investing in AI experiments with portfolio peer ventures" id="support6">
-                            <label for="support6">Co-investing in AI experiments with portfolio peer ventures</label>
-                        </div>
-                        <div class="checkbox-option">
-                            <input type="checkbox" name="Elea_Support" value="Not needed at this stage" id="support7">
-                            <label for="support7">Not needed at this stage</label>
-                        </div>
-                    </div>
-                    <div class="comment-box">
-                        <div class="comment-toggle" onclick="toggleComment(this)">Add optional comment</div>
-                        <div class="comment-content">
-                            <label class="comment-label">Optional comment:</label>
-                            <textarea name="Elea_Support_Comment" placeholder="Any additional details..."></textarea>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Q5.2: AI use cases for eEC session -->
-                <div class="question-group">
-                    <label class="question-label">
-                        Are there specific AI use cases you'd like to explore with other elea portfolio entrepreneurs in a future eEC session?
-                    </label>
-                    <textarea name="EEC_AI_Use_Cases" class="input-text" style="min-height: 100px;" placeholder="Describe specific AI applications or challenges you'd like to discuss with peers..."></textarea>
-                    <div class="comment-box">
-                        <div class="comment-toggle" onclick="toggleComment(this)">Add optional comment</div>
-                        <div class="comment-content">
-                            <label class="comment-label">Optional comment:</label>
-                            <textarea name="EEC_AI_Use_Cases_Comment" placeholder="Any additional thoughts..."></textarea>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Q5.3: Transformative but out-of-reach AI (NEW) -->
+                <!-- Q4.5: Transformative but out-of-reach AI (MOVED FROM SECTION 5) -->
                 <div class="question-group">
                     <label class="question-label">
                         What's ONE AI capability that would be transformative for your impact model but is currently out of reach?
@@ -1174,6 +1046,49 @@
                         <div class="comment-content">
                             <label class="comment-label">Optional comment:</label>
                             <textarea name="AI_Transformative_Capability_Comment" placeholder="Any additional context..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION 5: SUPPORT FROM ELEA -->
+                <div class="section-header">Section 5: Support from elea</div>
+
+                <!-- Q5.1: Workshop Use Case Sharing (NEW) -->
+                <div class="question-group">
+                    <label class="question-label">
+                        During the workshop session, would you be open to sharing a use case from your venture (e.g., to brainstorm ideas, troubleshoot a specific challenge, or share best practices related to AI and scalability)? <span class="required">*</span>
+                    </label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="Workshop_Use_Case_Sharing" value="Yes">
+                            <span class="radio-text">Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="Workshop_Use_Case_Sharing" value="No">
+                            <span class="radio-text">No</span>
+                        </label>
+                    </div>
+                    <div class="question-group" style="margin-top: 20px;">
+                        <label class="question-label">
+                            If yes, please tell us what you would like to bring to the discussion
+                        </label>
+                        <div class="help-text">E.g., a challenge you're facing, a question you'd like input on, an idea to explore, or a best practice to share</div>
+                        <textarea name="Workshop_Use_Case_Details" class="input-text" style="min-height: 100px;" placeholder="Describe what you'd like to discuss..."></textarea>
+                    </div>
+                </div>
+
+                <!-- Q5.2: Where elea support would be valuable (CONVERTED TO OPEN QUESTION) -->
+                <div class="question-group">
+                    <label class="question-label">
+                        Where would elea support be most valuable to help you leverage AI? <span class="required">*</span>
+                    </label>
+                    <div class="help-text">E.g., Sharing best practices from other portfolio ventures / Providing external expert advice (data scientists, AI strategists) / Training/workshops on AI for impact</div>
+                    <textarea name="Elea_Support" class="input-text" style="min-height: 100px;" placeholder="Describe the type of support that would be most helpful..." required></textarea>
+                    <div class="comment-box">
+                        <div class="comment-toggle" onclick="toggleComment(this)">Add optional comment</div>
+                        <div class="comment-content">
+                            <label class="comment-label">Optional comment:</label>
+                            <textarea name="Elea_Support_Comment" placeholder="Any additional details..."></textarea>
                         </div>
                     </div>
                 </div>
@@ -1212,28 +1127,27 @@
         function updateProgress() {
             const form = document.getElementById('surveyForm');
             
-            // Count all required fields (text inputs and slider)
-            const requiredTextFields = form.querySelectorAll('input[type="text"][required], input[type="range"][required]');
+            // Count all required fields (text inputs, textareas, and slider)
+            const requiredTextFields = form.querySelectorAll('input[type="text"][required], textarea[required], input[type="range"][required]');
             
             // Count required radio groups manually
             const requiredRadioGroups = [
+                'Workshop_Attendance',
                 'AI_Usage_Frequency',
                 'AI_In_Core_Offering',
-                'Business_Effect_Financial',
-                'Data_Quality',
                 'AI_Strategy',
                 'AI_Beneficiary_Capacity',
                 'AI_Beneficiary_Access',
-                'AI_Cost_Per_Impact'
+                'AI_Cost_Per_Impact',
+                'Workshop_Use_Case_Sharing'
             ];
             
-            // Count required checkbox groups
+            // Count required checkbox groups  
             const requiredCheckboxGroups = [
                 'Current_AI_Tools',
                 'AI_Application_Areas',
                 'AI_Barriers',
-                'AI_Impact_Outcomes',
-                'Elea_Support'
+                'AI_Impact_Outcomes'
             ];
             
             const totalRequired = requiredTextFields.length + requiredRadioGroups.length + requiredCheckboxGroups.length;
@@ -1279,25 +1193,24 @@
             ];
             
             const requiredRadioFields = [
+                'Workshop_Attendance',
                 'AI_Usage_Frequency',
                 'AI_In_Core_Offering',
-                'Business_Effect_Financial',
-                'Data_Quality',
                 'AI_Strategy',
                 'AI_Beneficiary_Capacity',
                 'AI_Beneficiary_Access',
-                'AI_Cost_Per_Impact'
+                'AI_Cost_Per_Impact',
+                'Workshop_Use_Case_Sharing'
             ];
             
             const requiredCheckboxGroups = [
                 { name: 'Current_AI_Tools', label: 'Which AI tools does your organization currently use?' },
                 { name: 'AI_Application_Areas', label: 'In which areas of your business have you applied or piloted AI?' },
                 { name: 'AI_Barriers', label: 'What is the biggest barrier to integrating AI?' },
-                { name: 'AI_Impact_Outcomes', label: 'How is AI directly improving outcomes for your target population?' },
-                { name: 'Elea_Support', label: 'Where would elea support be most valuable?' }
+                { name: 'AI_Impact_Outcomes', label: 'How is AI directly improving outcomes for your target population?' }
             ];
             
-            // Check text fields
+            // Check text and textarea fields
             for (let fieldName of requiredTextFields) {
                 const field = this.querySelector(`[name="${fieldName}"]`);
                 if (!field || !field.value.trim()) {
